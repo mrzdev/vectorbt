@@ -22,7 +22,6 @@ from vectorbt.signals import *
 from vectorbt.records import *
 from vectorbt.portfolio import *
 from vectorbt.labels import *
-from vectorbt.messaging import *
 
 # Import all submodules
 from vectorbt.utils.module_ import import_submodules
