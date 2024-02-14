@@ -27,8 +27,9 @@ setup(
         'matplotlib',
         'plotly>=4.12.0',
         'ipywidgets>=7.0.0',
-        "numba>=0.53.1; python_version < '3.10'",
-        "numba>=0.56.0; python_version >= '3.10'",
+        "numba>=0.53.1, <0.57.0; python_version<'3.10'",
+        "numba>=0.56.0, <0.57.0; python_version>='3.10' and python_version<'3.11'",
+        "numba>=0.57.0; python_version>='3.11'",
         'dill',
         'tqdm',
         'dateparser',
@@ -42,15 +43,15 @@ setup(
     ],
     extras_require={
         'full': [
-            'yfinance>=0.1.63',
+            'yfinance>=0.2.22',
             'python-binance',
-            'ccxt',
+            'ccxt>=4.0.14',
             'alpaca-trade-api==1.4.3',
             'ray>=1.4.1',
             'ta',
             'pandas_ta',
             'TA-Lib',
-            'python-telegram-bot>=13.4',  # LGPLv3
+            'python-telegram-bot>=13.4,<20.0',  # LGPLv3
             'quantstats>=0.0.37'
         ],
         'cov': [
@@ -59,7 +60,7 @@ setup(
             'codecov'
         ]
     },
-    python_requires='>=3.6, <3.11',
+    python_requires='>=3.6',
     license='Apache 2.0 with Commons Clause',
     classifiers=[
         'Development Status :: 5 - Production/Stable',
@@ -71,6 +72,8 @@ setup(
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
         'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: 3.11',
+        'Programming Language :: Python :: 3.12',
         'Operating System :: OS Independent',
         'Intended Audience :: Science/Research',
         'Topic :: Software Development',
