@@ -21,7 +21,7 @@ setup(
         'vectorbt': ['templates/*.json']
     },
     install_requires=[
-        'numpy>=1.16.5',
+        'numpy>=1.16.5, <2.0.0',
         'pandas',
         'scipy',
         'matplotlib',
@@ -46,7 +46,7 @@ setup(
             'yfinance>=0.2.22',
             'python-binance',
             'ccxt>=4.0.14',
-            'alpaca-trade-api==1.4.3',
+            'alpaca-trade-api>=1.4.3',
             'ray>=1.4.1',
             'ta',
             'pandas_ta',
